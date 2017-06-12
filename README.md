@@ -24,6 +24,6 @@ how to use BGPStream as part of your research. Because we have limited time, you
 should look quickly at the description for each exercise and start with the one
 you find most interesting.
 
- - Exercise 3: [Building a "BGP Info" HTTP API using realtime BGP data](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-3-bgp-info/README.md)
+ - Exercise 3: [Building a "BGP Info" query service using realtime BGP data](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-3-bgp-info/README.md)
  - Exercise 4: [Triggering active probing based on BGP events](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-4-active-probing/README.md)
  - Exercise 5: [Longitudinal data analysis using Apache Spark](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-5-spark/README.md)
