@@ -22,12 +22,14 @@ filtered to a single prefix of interest (e.g., that of your university).  This
 can be accomplished with a single `bgpreader` command, and the output should
 require no further filtering.
 
-_Tip:_ Route Views collectors output a RIB every 2 hours whereas RIPE RIS
-collectors output a RIB every 8 hours (both aligned to midnight). Also, RIB
-dumps are made atomically, so you should specify a window of a few minutes
-(e.g., 00:00 -> 00:05). Also, if you don't already have a favorite collector to
-test with, you may want to use `route-views.sg`, which has only a few full-feed
-peers and is thus fast to process data for.
+Route Views collectors output a RIB every 2 hours whereas RIPE RIS collectors
+output a RIB every 8 hours (both aligned to midnight). Also, RIB dumps are made
+atomically, so you should specify a window of a few minutes (e.g., 00:00 ->
+00:05).
+
+If you don't already have a favorite collector to test with, you may want to use
+`route-views.sg`, which has only a few full-feed peers and is thus fast to
+process data for.
 
 ## Task 2: Rank peers based on the number of updates observed in a 1 minute window
 
