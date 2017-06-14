@@ -12,15 +12,6 @@ The [BGPStream website](https://bgpstream.caida.org) has
 [install instructions](http://bgpstream.caida.org/docs/install) for a variety of
 operating systems.
 
-Note: if you plan to run BGPStream on your laptop (or a machine with limited
-RAM), you may want to run the following in your shell before running `bgpreader`
-or any scripts that use PyBGPStream:
-```
-export LIBTRACEIO=nothreads
-```
-This will force BGPStream to use a single thread for reading BGP data, and will
-use significantly less memory.
-
 ## Exercises
 
 The first two exercises are simple and designed to get you familiar with using
@@ -42,3 +33,15 @@ you find most interesting.
  - Exercise 3: [Building a "BGP Info" query service using realtime BGP data](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-3-bgp-info/README.md)
  - Exercise 4: [Triggering active probing based on BGP events](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-4-active-probing/README.md)
  - Exercise 5: [BGP measurement analysis using Apache Spark](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-5-spark/README.md)
+
+
+## Troubleshooting
+
+If you plan to run BGPStream on your laptop (or a machine with limited RAM), you
+may want to run the following in your shell before running `bgpreader` or any
+scripts that use PyBGPStream:
+```
+export LIBTRACEIO=nothreads
+```
+This will force BGPStream to use a single thread for reading BGP data, and will
+use significantly less memory.
