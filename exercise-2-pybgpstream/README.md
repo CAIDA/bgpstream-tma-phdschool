@@ -20,10 +20,11 @@ except you will use PyBGPStream and standard Python features to extract and
 post-process the BGP data rather than using command line tools.
 
 As with the BGPReader task, you should configure BGPStream (using the
-PyBGPStream API's filter methods) selecting updates data for a 1 minute
-window. You will then use a nested while-loop structure like the one shown in
-the tutorial to iterate through all Elems, populating a data structure with
-per-peer statistics. Once all elems have been processed, print the statistics to
-`stdout`.
+PyBGPStream API's
+[filter methods](http://bgpstream.caida.org/docs/api/pybgpstream/_pybgpstream.html#_pybgpstream.BGPStream.add_filter))
+selecting updates data for a 1 minute window. You will then use a nested
+while-loop structure like the one shown in the tutorial to iterate through all
+Elems, populating a data structure with per-peer statistics. Once all elems have
+been processed, print the statistics to `stdout`.
 
 ## Task 2: ??
