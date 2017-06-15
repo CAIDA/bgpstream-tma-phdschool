@@ -26,7 +26,7 @@ programatically from within Python (using
 The remaining exercises all use PyBGPStream and build on the code you wrote in
 Exercise 2.
 
- - Exercise 3: [Peer routing table sizes](exercise-3-peer-routing-tables/README.md)
+ - Exercise 3: [Peer routing table sizes](exercise-3-routing-tables/README.md)
  - Exercise 4: [Communities](exercise-4-communities/README.md)
  - Exercise 5: [AS path sanitization](exercise-5-path-sanitization/README.md)
  - Exercise 6: [Triggering active measurements](exercise-6-active-measurements/)
