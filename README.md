@@ -20,16 +20,16 @@ BGPStream, first from the command line (using
 programatically from within Python (using
 [PyBGPStream](http://bgpstream.caida.org/docs/api/pybgpstream)).
 
- - Exercise 1: [Using BGPReader](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-1-bgpreader/)
- - Exercise 2: [Using PyBGPStream](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-2-pybgpstream/)
+ - Exercise 1: [Using BGPReader](exercise-1-bgpreader/README.md)
+ - Exercise 2: [Using PyBGPStream](exercise-2-pybgpstream/README.md)
 
 The remaining exercises all use PyBGPStream and build on the code you wrote in
 Exercise 2.
 
- - Exercise 3: [Peer routing table sizes](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-3-peer-routing-tables/)
- - Exercise 4: [Communities](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-4-communities/)
- - Exercise 5: [AS path sanitization](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-5-path-sanitization/)
- - Exercise 6: [Triggering active measurements](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-6-active-measurements/)
+ - Exercise 3: [Peer routing table sizes](exercise-3-peer-routing-tables/README.md)
+ - Exercise 4: [Communities](exercise-4-communities/README.md)
+ - Exercise 5: [AS path sanitization](exercise-5-path-sanitization/README.md)
+ - Exercise 6: [Triggering active measurements](exercise-6-active-measurements/)
 
 ## Troubleshooting
 
