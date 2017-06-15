@@ -33,11 +33,13 @@ made atomically, so you should specify a window of a few minutes (e.g., 00:00 ->
 ## Task 2: Rank peers based on the number of updates observed in a 1 minute window
 
 For this task you should use BGPReader to output the updates for all Route Views
-and RIPE RIS collectors for a 1 minute window of your chosing, and then pipe the
-output into standard unix tools (e.g., `sort`, `uniq`, etc.) to rank the peer
-ASes in terms of the number of updates seen from each. Bonus points if you
-separate the ranking by update type (i.e., announcements and withdrawals).
+and RIPE RIS collectors for a 1 minute window of your choosing, and then pipe
+the output into standard unix tools (e.g., `sort`, `uniq`, etc.) to rank the
+peer ASes in terms of the number of updates seen from each.
 
-Note, some ASes are peered with by multiple collectors, so you should also
-consider the collector name part of the "key" for uniquely identifying a peer
-(i.e., `collector|peer-AS`).
+_Note:_ some ASes are peered with by multiple collectors, so you should consider
+the collector name part of the "key" for uniquely identifying a peer.
+Additionally, some collectors peer with an AS multiple times, so you should also
+consider the peer IP as part of the key. Given this, your peer "ID" should be:
+`collector|peer-AS|peer-IP`. This is true any time you need to uniquely identify
+a peer.
