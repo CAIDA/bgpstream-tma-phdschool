@@ -10,8 +10,10 @@ the number of unique prefixes per-peer in a RIB dump, then plot a distribution.
 1. Modify your script to process RIB (`ribs`) data instead of Updates
 (`updates`), select only a single collector (use `route-views2` this time), and
 select a time interval that includes a RIB dump (`2017-01-15 00:00 -> 01:00`).
+
 1. Modify your statistics collection to count the number of unique prefixes each
-peer announces (instead of number of updates). 
+peer announces (instead of number of updates).
+
 1. Use your preferred plotting tool to generate a CDF of peer routing table
 sizes. You should see a "knee" at the right side of the graph that represents
 the full-feed peers. What would be a good threshold for determining if a peer is

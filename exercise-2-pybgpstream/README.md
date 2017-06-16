@@ -30,13 +30,17 @@ but these filters are applied programmatically using method calls.
 in the 
 [PyBGPStream tutorial](http://bgpstream.caida.org/docs/tutorials/pybgpstream)
 as a starting point.
+
 1. Configure BGPStream to include only _update_ data for a _1 minute window_
 using the
 [filter methods](http://bgpstream.caida.org/docs/api/pybgpstream/_pybgpstream.html#_pybgpstream.BGPStream.add_filter).
+
 1. Modify the inner `while` loop (that iterates over Elems) to build a data
 structure that tracks the number of elems from each peer (remember to use
 `collector|peer-AS|peer-IP` as the ID of a peer).
+
 1. After processing the data from BGPStream output a ranking of peer update 
 volume (from most to least) either to `stdout` or to a file.
-1. _(Bonus)_ Separate the statistics by elem type
-(Annoucements, Withdrawal, and State Messages).
+
+1. _(Bonus)_ Separate the statistics by elem type (Annoucements, Withdrawal, and
+State Messages).
