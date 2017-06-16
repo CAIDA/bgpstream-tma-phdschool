@@ -41,3 +41,33 @@ export LIBTRACEIO=nothreads
 ```
 This will force BGPStream to use a single thread for reading BGP data, and will
 use significantly less memory.
+
+## Helpful Patterns
+
+### Elem generator
+You may find it more convenient to define a generator function that hides the
+code to extract Records and Elems from the stream. The next version of
+PyBGPStream will include an API similar to this.
+
+First, define the generator function (you can use this code verbatim):
+```python
+def elem_generator(_stream):
+    _rec = _pybgpstream.BGPRecord()
+    while _stream.get_next_record(_rec):
+        while True:
+            _elem = _rec.get_next_elem()
+            if _elem is None:
+                break
+            yield (_rec, _elem)
+```
+
+Then, instantiate the stream like normal and use the standard Python
+`for ... in ...` syntax to iterate over records and elems in the stream:
+```python
+bs = _pybgpstream.BGPStream()
+# configure the stream here
+bs.start()
+
+for (rec, elem) in elem_generator(bs):
+    print "%s: %s" % (rec.collector, elem.peer_asn)
+```
