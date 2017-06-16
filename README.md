@@ -57,7 +57,7 @@ def elem_generator(_stream):
         while True:
             _elem = _rec.get_next_elem()
             if _elem is None:
-                break
+                return
             yield (_rec, _elem)
 ```
 
