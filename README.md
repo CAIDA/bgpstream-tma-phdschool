@@ -12,6 +12,12 @@ The [BGPStream website](https://bgpstream.caida.org) has
 [install instructions](http://bgpstream.caida.org/docs/install) for a variety of
 operating systems.
 
+## Code Organization
+
+You should clone this repository and use the existing exercise directories to
+organize your code -- this will also give you something to refer back to in the
+future when you want to make use of BGPStream.
+
 ## Exercises
 
 The first two exercises are simple and designed to get you familiar with using
@@ -23,8 +29,10 @@ programatically from within Python (using
  - Exercise 1: [Using BGPReader](exercise-1-bgpreader/README.md)
  - Exercise 2: [Using PyBGPStream](exercise-2-pybgpstream/README.md)
 
-The remaining exercises all use PyBGPStream and build on the code you wrote in
-Exercise 2.
+The remaining exercises all use PyBGPStream and incrementally build on the code
+you wrote in Exercise 2. While each exercise builds on the code written in the
+previous exercise, **we strongly recommend you work on each exercise in a
+separate file**.
 
  - Exercise 3: [Peer routing table sizes](exercise-3-routing-tables/README.md)
  - Exercise 4: [Communities](exercise-4-communities/README.md)
