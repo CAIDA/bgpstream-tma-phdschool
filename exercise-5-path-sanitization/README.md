@@ -14,7 +14,8 @@ with near-realtime monitoring of BGP data.
 from `route-views2` between 00:00 and 01:00 on Jan 15th 2017.
 
 1. Replace the community-processing code with code that splits the AS path into
-hops -- you can split the string on the space character (see the note below).
+hops -- you can split the string on the space character (but see the note
+at the end of this page).
 
 1. Once you have a list of AS hops, process them to find occurrences of
 prepending (adjacent, repeated ASNs).
@@ -27,12 +28,13 @@ sets (`AS_SET`), AS sequences (`AS_SEQUENCE`), confederation sets
 [IANA.SpecialAS](https://www.iana.org/assignments/iana-as-numbers-special-registry/iana-as-numbers-special-registry.xhtml)
 as a reference, identify those hops that are "special-use" ASNs.
 
-1. For each of the classes of "unusual" hops that you have identified
+1. For each of the classes of "unusual" hops that you have identified:
   - AS Prepending
   - AS sets
   - Confederation sets
   - Confederation sequences
   - Special-use ASNs
+
 Count the number of paths that each type occurs in (a single path may have
 multiple phenomena), and output a table to `stdout`.
 
