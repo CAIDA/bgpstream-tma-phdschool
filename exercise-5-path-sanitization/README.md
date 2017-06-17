@@ -36,14 +36,14 @@ as a reference, identify those hops that are "special-use" ASNs.
   - Special-use ASNs
 
 Count the number of paths that each type occurs in (a single path may have
-multiple phenomena), and output a table to `stdout`.
+multiple phenomena), and `print` a table to `stdout`.
 
 ## Task 2: Realtime Monitoring
 
-1. Before you move to the next exercise, change your code to process `updates`
-data, and output the statistics table for _every minute_ of BGP data processed.
-Use `elem.time` to determine the "current" time (i.e., don't use your system
-clock).
+1. Before you move to the next exercise, change your code (but first copy it to
+a new file!) to process `updates` data, and output the statistics table for
+_every minute_ of BGP data processed. Use `elem.time` to determine the "current"
+time (i.e., don't use your system clock).
 
 1. Once you are satisfied that this works, remove the `collector` filter (i.e.,
 process data from all collectors), and change the time interval only have a
