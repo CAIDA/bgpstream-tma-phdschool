@@ -38,6 +38,12 @@ as a reference, identify those hops that are "special-use" ASNs.
 Count the number of paths that each type occurs in (a single path may have
 multiple phenomena), and `print` a table to `stdout`.
 
+_Note:_ While not common, it is theoretically possible to have a Confederation
+Sequence hop ([RFC5065](https://tools.ietf.org/html/rfc5065)), the notation for
+which is `(A B C)`, which would cause problems when we split the path string on
+the space character. Given this, you must always check for the presence of `(`
+in the AS path string, and if found, handle it appropriately.
+
 ## Task 2: Realtime Monitoring
 
 1. Before you move to the next exercise, change your code (but first copy it to
@@ -49,15 +55,12 @@ time (i.e., don't use your system clock).
 process data from all collectors), and change the time interval only have a
 single (start) time, set to approximately 30 mins ago. This will put BGPStream
 into "live" mode and your script will process updates as they are made
-available.
+available (see note below).
 
 1. Leave this running for at least 10 mins as you work on the next exercise and
 you should see your stats table continue to be output as more data is processed.
 
-
-_Note:_ While not common, it is theoretically possible to have a Confederation
-Sequence hop ([RFC5065](https://tools.ietf.org/html/rfc5065)), the notation for
-which is `(A B C)`, which would cause problems when we split the path string on
-the space character. Given this, you must always check for the presence of `(`
-in the AS path string, and if found, handle it appropriately.
-
+_Note:_ Since BGPStream is streaming data collected in batches, there will
+normally be around 5 mins between batches of data that arrives when running in
+live mode as this is the batch length of RIPE RIS updates (Route Views updates
+are output every 15 mins).
