@@ -33,15 +33,37 @@ AS, or an announcement that creates a MOAS, etc.. However, to ensure we find
 _something_ to traceroute, we'll just pick any announcement.
 
 
-## Traceroute Code
+## (Terrible) Traceroute Code
 
 The following will execute a traceroute to the given IP address by calling the
-system `traceroute` command. This has been tested on macOS and Ubuntu 14.04. It
-almost certainly won't work on Windows without at least some modification. **You
-definitely must not use this code to do any real research!**
+system `traceroute` command and returns the output as a string. If the command
+hasn't completed after 20 seconds, it is killed and the current output returned.
+
+This has been tested on macOS, FreeBSD, and Ubuntu 14.04 (after running 
+`sudo apt-get install traceroute`). It almost certainly won't work on Windows
+without at least some modification. **You definitely must not use this code to
+do any real research!**
 
 ```python
-def do_traceroute(target_ip, command="traceroute", args=None):
-    # TODO!
-    return ""
+import errno
+import subprocess
+import threading
+
+def timeout(p):
+    if p.poll() is None:
+        try:
+            p.kill()
+        except OSError as e:
+            if e.errno != errno.ESRCH:
+                raise
+
+def do_traceroute(dest):
+    p = subprocess.Popen(["traceroute", dest],
+                         stdout=subprocess.PIPE,
+                         stderr=subprocess.STDOUT)
+    t = threading.Timer(20.0, timeout, [p])
+    t.start()
+    p.wait()
+    t.cancel()
+    return p.stdout.read()
 ```
