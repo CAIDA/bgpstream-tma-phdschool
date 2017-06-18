@@ -50,7 +50,18 @@ export LIBTRACEIO=nothreads
 This will force BGPStream to use a single thread for reading BGP data, and will
 use significantly less memory.
 
-## Helpful Patterns
+## Useful Web Services
+
+ - Convert between human dates and epoch seconds (since BGPStream currently only
+ understands seconds since the UNIX epoch): https://www.epochconverter.com/
+ 
+ - Look up prefixes and ASNs by name, look up prefixes by origin AS, etc.:
+ http://bgp.he.net/
+ 
+ - Look up all kinds of interesting things about Internet resources (IP
+ addresses, ASes, Prefixes, DNS names, etc.): https://stat.ripe.net/
+
+## Helpful Code
 
 ### Elem generator
 You may find it more convenient to define a generator function that hides the
