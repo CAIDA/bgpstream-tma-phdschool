@@ -31,7 +31,7 @@ in the
 [PyBGPStream tutorial](http://bgpstream.caida.org/docs/tutorials/pybgpstream)
 as a starting point.
 
-1. Configure BGPStream to include only _update_ data for a _1 minute window_
+1. Configure BGPStream to include only _update_ data for a _1 minute window_ (e.g., `1483228800,1483228860`)
 using the
 [filter methods](http://bgpstream.caida.org/docs/api/pybgpstream/_pybgpstream.html#_pybgpstream.BGPStream.add_filter).
 
