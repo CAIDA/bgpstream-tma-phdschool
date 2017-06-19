@@ -8,6 +8,9 @@ filter) anomalous paths (e.g., with reserved ASNs, or AS sets).
 In this exercise, you will learn to perform path sanitization and experiment
 with near-realtime monitoring of BGP data.
 
+Documentation of the format of the AS path string can be found at the bottom of
+[this page](https://github.com/CAIDA/bgpstream/blob/master/pybgpstream/docs/api__pybgpstream.rst).
+
 ## Task 1: Path Sanitization
 
 1. Continue using the same BGPStream configuration as in Exercise 4: RIB records
@@ -22,7 +25,9 @@ prepending (adjacent, repeated ASNs).
 
 1. Then, identify hops that are not a "simple" ASN. That is, those that are: AS
 sets (`AS_SET`), AS sequences (`AS_SEQUENCE`), confederation sets
-(`AS_CONFED_SET`), or confederation sequences (`AS_CONFED_SEQUENCE`).
+(`AS_CONFED_SET`), or confederation sequences (`AS_CONFED_SEQUENCE`). You can do
+this by looking for the special characters used to represent each type (refer to
+the [path string format documentation](https://github.com/CAIDA/bgpstream/blob/master/pybgpstream/docs/api__pybgpstream.rst).)
 
 1. Finally, using
 [IANA.SpecialAS](https://www.iana.org/assignments/iana-as-numbers-special-registry/iana-as-numbers-special-registry.xhtml)
