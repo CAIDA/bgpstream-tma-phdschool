@@ -9,7 +9,7 @@ the number of unique prefixes per-peer in a RIB dump, then plot a distribution.
 
 1. Modify your [script](https://github.com/CAIDA/bgpstream-tma-phdschool/blob/master/exercise-2-pybgpstream/exercise-2-updates-per-peer.complete.py) to process RIB (`ribs`) data instead of Updates
 (`updates`), select only a single collector (use `route-views2` this time), and
-select a time interval that includes a RIB dump (`2017-01-15 00:00 -> 01:00`).
+select a time interval that includes a RIB dump (e.g., `1484438400,1484442000`).
 
 1. Modify your statistics collection to count the number of unique prefixes each
 peer announces (instead of number of updates).
